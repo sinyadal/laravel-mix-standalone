@@ -11,12 +11,13 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('src/js/app.js', 'dist/js')
-   .sass('src/scss/app.scss', 'dist/css')
+mix.js('src/assets/js/app.js', 'dist/js')
+    .sass('src/assets/scss/app.scss', 'dist/css')
     .browserSync({
-        proxy: 'mix.gg',
+        proxy: 'url',
         files: ['**/*.html', 'dist/css/**/*.css', 'dist/js/**/*.js']
     });
+
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.
